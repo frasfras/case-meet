@@ -4,8 +4,8 @@ import AddUserCard from 'components/AddUserCard';
 import _ from 'lodash';
 import GenderSortDropdown from 'components/GenderSortDropdown';
 import SearchUserInput from 'components/SearchUserInput';
-// import { getUsers } from 'api/RandomUsers';
-// import UserCardList from 'components/UserCardList';
+
+
 
 export default class MainComponent extends Component {
 
@@ -24,9 +24,7 @@ export default class MainComponent extends Component {
   }
 
   componentDidMount() {
-    // getUsers(this.state.defaultNumberOfRandomUsers, users => {
-    //   this.setState({ users });
-    // });
+   
   }
 
   removeUser(user) {
