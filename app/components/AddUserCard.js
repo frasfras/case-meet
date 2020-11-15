@@ -1,10 +1,6 @@
 import React , { Component } from 'react';
-// import { getRandomPicture } from 'api/RandomUsers';
-import Select from 'react-select';
-// import CountryCodes from 'CountryCodes';
-// import Airtable from 'airtable';
 
-// const base= new Airtable({apiKey:"keyjVpG4zXCD49VfC" }).base('appazV7DRki8jlXtd');
+import Select from 'react-select';
 export default class AddUserCard extends Component {
 
   onHandleAddUser(user) {
@@ -67,44 +63,6 @@ export default class AddUserCard extends Component {
   onSubmitForm(e) {
     e.preventDefault();
 
-    const gender = this.props.selectedGender.trim();
-    const name = this.refs.name.value.trim();
-    const email = this.refs.email.value.trim();
-    const age = this.refs.age.value.trim();
-    const region = this.props.selectedCountry.trim();
-     const photo = 'https://dl.airtable.com/.attachmentThumbnails/0f04dd84d03272216799a09308f3f392/39f02a8a';
-     // getRandomPicture(gender);
-      // base('Finished').create([
-      // {
-      //   "fields": {
-      //     "PurchaseCode": "PRO-25",
-      //     "ProductType": name,
-      //     "Sizes": "6012075, 5010075",
-      //     "Quantities": age,
-      //     "FinishedDate": "11-Oct-2020",
-      //     "Status": "active"
-      //   }
-      // }
-      // ], function(err, records) {
-      //   if (err) {
-      //     console.error(err);
-      //     return;
-      //   }
-      //   records.forEach(function (record) {
-      //     console.log(record.getId());
-      //   });
-      // });
-
-    if(name && email && age && region && gender) {
-      const user = { name, email, age, region, photo, gender };
-     
-
-      this.onHandleAddUser(user);
-      this.resetFields();
-    }else {
-      alert("Please input all fields correctly")
-    }
-
   }
 
   resetFields(e) {
@@ -117,7 +75,8 @@ export default class AddUserCard extends Component {
     this.refs.day.value = '';
     this.refs.time.value = '';
     this.refs.facts.value = '';
-    // this.onHandeChangeSelectedCountry();
+    this.onHandeChangeSelectedCountry();
+    this.onHandeChangeSelectedGender();
 
   }
  
