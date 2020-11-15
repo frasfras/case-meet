@@ -1,11 +1,7 @@
 import React, { Component } from 'react';
-import UserCard from 'components/UserCard';
+
 import AddUserCard from 'components/AddUserCard';
 import _ from 'lodash';
-import GenderSortDropdown from 'components/GenderSortDropdown';
-import SearchUserInput from 'components/SearchUserInput';
-
-
 
 export default class MainComponent extends Component {
 
